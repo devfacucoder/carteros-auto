@@ -1,0 +1,62 @@
+{
+  "name": "carteros-auto",
+  "version": "0.2.0-Beta",
+  "type": "module",
+  "main": "electron/main.js",
+  "scripts": {
+    "server": "node ./backend/index.js",
+    "dev": "electron .",
+    "dev:frontend": "cd frontend && npm run dev",
+    "build:electron": "electron-builder",
+    "build:frontend": "cd frontend && npm run build",
+    "build": "npm run build:frontend && electron-builder"
+  },
+  "build": {
+    "appId": "com.carteros.auto",
+    "productName": "Carteros Auto",
+    "copyright": "© 2026 Facundo Ferreyra",
+    "directories": {
+      "buildResources": "assets"
+    },
+    "files": [
+      "electron/**/*",
+      "backend/**/*",
+      "frontend/dist/**/*",
+      "package.json"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "assets/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowElevation": true,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Carteros Auto",
+      "installerIcon": "assets/icon.ico",
+      "uninstallerIcon": "assets/icon.ico",
+      "installerHeaderIcon": "assets/icon.ico",
+      "artifactName": "CarterosAuto-Setup-${version}.exe"
+    }
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "epxress": "^0.0.1-security",
+    "express": "^5.2.1",
+    "multer": "^2.0.2",
+    "nodemailer": "^7.0.12",
+    "socket.io": "^4.8.3"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1",
+    "electron": "^39.2.7",
+    "electron-builder": "^26.4.0"
+  }
+}

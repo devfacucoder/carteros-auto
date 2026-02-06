@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+button{
+    cursor: pointer;
+}
+
+.btn_primary {
+  background-color: var(--color-blue-950);
+  color: var(--color-yellow-400);
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.btn_primary:hover {
+  background-color: #0f2a44;
+}
+
+.btn_secondary {
+  background-color: #1f2937; /* gris oscuro */
+  color: var(--color-yellow-400);
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.btn_secondary:hover {
+  background-color: #374151;
+}
+
+.btn_outline {
+  background: transparent;
+  color: var(--color-yellow-400);
+  border: 1px solid #334155;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.btn_outline:hover {
+  background-color: #0f172a;
+}
+
+/* Badge contador */
+.badge {
+  background-color: #16a34a;
+  color: #022c22;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #2563eb #020617;
+}
+
+/* Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #020617;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2563eb;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1d4ed8;
+}
+
+.popAnimate{
+  animation: popAnimate 0.9s ease-in-out;
+
+}
+@keyframes popAnimate {
+  0% {
+    transform: translate(500px, 0) ;
+  }
+  100% {
+    transform: translate(0, 0) ;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
